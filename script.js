@@ -14,6 +14,50 @@ function updateTime() {
     }
 }
 
+// Show Snapchat username
+function showSnapchat() {
+    // Create a temporary element to show the Snapchat info
+    const snapInfo = document.createElement('div');
+    snapInfo.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.9);
+        color: #fffc00;
+        padding: 30px;
+        border-radius: 20px;
+        border: 2px solid #fffc00;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 0 30px rgba(255, 252, 0, 0.5);
+        backdrop-filter: blur(10px);
+    `;
+    snapInfo.innerHTML = `
+        <div style="margin-bottom: 15px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="Snapchat" style="width: 50px; height: 50px; filter: drop-shadow(0 0 10px rgba(255, 252, 0, 0.8));">
+        </div>
+        <div>My Snapchat is</div>
+        <div style="font-size: 2rem; margin-top: 10px; text-shadow: 0 0 20px rgba(255, 252, 0, 0.8);">@Phonzr</div>
+        <div style="margin-top: 15px; font-size: 1rem; opacity: 0.8;">Click anywhere to close</div>
+    `;
+    
+    document.body.appendChild(snapInfo);
+    
+    // Remove the popup when clicking anywhere
+    setTimeout(() => {
+        document.addEventListener('click', function removePopup() {
+            if (document.body.contains(snapInfo)) {
+                document.body.removeChild(snapInfo);
+            }
+            document.removeEventListener('click', removePopup);
+        });
+    }, 100);
+}
+
 // Initialize time display
 updateTime();
 
