@@ -37,11 +37,10 @@ function showSnapchat() {
         backdrop-filter: blur(10px);
     `;
     snapInfo.innerHTML = `
-        <div style="margin-bottom: 15px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="Snapchat" style="width: 50px; height: 50px; filter: drop-shadow(0 0 10px rgba(255, 252, 0, 0.8));">
+        <div style="margin-bottom: 15px; font-size: 3rem;">
+            👻
         </div>
-        <div>My Snapchat is</div>
-        <div style="font-size: 2rem; margin-top: 10px; text-shadow: 0 0 20px rgba(255, 252, 0, 0.8);">@Phonzr</div>
+        <div style="font-size: 2rem; text-shadow: 0 0 20px rgba(255, 252, 0, 0.8);">@Phonzr</div>
         <div style="margin-top: 15px; font-size: 1rem; opacity: 0.8;">Click anywhere to close</div>
     `;
     

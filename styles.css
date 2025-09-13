@@ -153,6 +153,10 @@ body::before {
     height: 30px;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
     transition: transform 0.3s ease;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-link:hover .social-logo {
